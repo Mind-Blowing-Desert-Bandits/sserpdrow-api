@@ -27,6 +27,7 @@ const create = (req, res, next) => {
   const page = Object.assign(req.body.page, {
     _owner: req.user._id
   })
+  console.log('page:', page)
   Page.create(page)
     .then(page =>
       res.status(201)
