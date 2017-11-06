@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose')
 
-const pageSchema = new mongoose.Schema({
+const siteSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true
@@ -35,6 +35,6 @@ const pageSchema = new mongoose.Schema({
 }
 )
 
-const Page = mongoose.model('Page', pageSchema)
+const Site = mongoose.model('Site', siteSchema)
 
-module.exports = Page
+module.exports = Site
