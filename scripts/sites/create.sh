@@ -7,6 +7,12 @@ BLOGPOST1TITLE="My Summer"
 BLOGPOST1TEXT="I had a good summer."
 BLOGPOST2TITLE="My Winter"
 BLOGPOST2TEXT="Winter sucked.  It was cold."
+PAGE1TYPE="about"
+PAGE1TITLE="About My Business"
+PAGE1TEXTCONTENT="We are a farm"
+PAGE2TYPE="hours"
+PAGE2TITLE="Our Store Hours"
+PAGE2TEXTCONTENT="9-5 M-F"
 TOKEN=gNrwGnmXckEr56LnSyqzsUbEAeSxBh19qyJ+yYN/6us=--VmVUG8at2lC6fEuhrhp0x3lKIwVnNq2QCuEv7Dd5uo8=
 
 curl "${API}${URL_PATH}" \
@@ -18,7 +24,7 @@ curl "${API}${URL_PATH}" \
     "site":
     {
       "title": "'"${PAGETITLE}"'",
-      "blog":
+      "blogposts":
       [
         {
           "title": "'"${BLOGPOST1TITLE}"'",
@@ -28,7 +34,16 @@ curl "${API}${URL_PATH}" \
           "title": "'"${BLOGPOST2TITLE}"'",
           "textcontent": "'"${BLOGPOST2TEXT}"'"
         }
-      ]
+      ],
+      "pages": [{
+        "type": "'"${PAGE1TYPE}"'",
+        "title": "'"${PAGE1TITLE}"'",
+        "textcontent": "'"${PAGE1TEXTCONTENT}"'"
+      }, {
+        "type": "'"${PAGE2TYPE}"'",
+        "title": "'"${PAGE2TITLE}"'",
+        "textcontent": "'"${PAGE2TEXTCONTENT}"'"
+      }]
     }
   }'
 

@@ -7,7 +7,25 @@ const siteSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  blog: [{
+  blogposts: [{
+    title: {
+      type: String,
+      required: true
+    },
+    textcontent: {
+      type: String,
+      required: true
+    },
+    date: {
+      type: Date,
+      default: Date.now
+    }
+  }],
+  pages: [{
+    type: {
+      type: String,
+      enum: ['about', 'hours', 'contact']
+    },
     title: {
       type: String,
       required: true
