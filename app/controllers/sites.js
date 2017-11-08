@@ -38,7 +38,7 @@ const create = (req, res, next) => {
 
 const update = (req, res, next) => {
   delete req.body.site._owner  // disallow owner reassignment.
-
+  console.log(req.body)
   req.site.update(req.body.site)
     .then(() => res.sendStatus(204))
     .catch(next)
@@ -50,12 +50,42 @@ const destroy = (req, res, next) => {
     .catch(next)
 }
 
+const deleteBlogPost = (req, res, next) => {
+  const findSite = function () {
+    return Site.findOne({ _owner: req.user.id })
+  }
+  findSite()
+    .then((site) => {
+      site.blogposts.id(req.body.site.blogID).remove()
+      site.save()
+      return site
+    })
+    .then(() => res.sendStatus(204))
+    .catch(next)
+}
+
+const deletePage = (req, res, next) => {
+  const findSite = function () {
+    return Site.findOne({ _owner: req.user.id })
+  }
+  findSite()
+    .then((site) => {
+      site.pages.id(req.body.site.pageID).remove()
+      site.save()
+      return site
+    })
+    .then(() => res.sendStatus(204))
+    .catch(next)
+}
+
 module.exports = controller({
   index,
   show,
   create,
   update,
-  destroy
+  destroy,
+  deleteBlogPost,
+  deletePage
 }, { before: [
   { method: setUser, only: ['index', 'show'] },
   { method: authenticate, except: ['index', 'show'] },
