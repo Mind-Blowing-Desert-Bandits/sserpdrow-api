@@ -1,5 +1,5 @@
 # Sserpdrow-API
-About: The Sserpdrow API is used by the front-end application for the storage of Site records for individual users.  It uses Express, Mongoose, and MongoDB to store the data in a noSQL database.
+About: The Sserpdrow API is used by the front-end application for the storage of Site records for individual users.  It uses Express, Mongoose, and MongoDB to store the data in a noSQL database. Users interact with the API through the front end to create, edit, delete blogposts, sites and pages.
 
 ## Links
 Client UI: https://mind-blowing-desert-bandits.github.io/sserpdrow-client/
@@ -11,7 +11,7 @@ API Endpoint: https://sserpdrow-mbdb-api.herokuapp.com/
 Express; Mongo; Mongoose
 
 ## Unsolved Problems
-Creating a custom route for just inserting a single blog post into the Sites collection
+No real unsolved problems.  We mainly ran out of time.  This prevented us from implementing some things the way we wanted to (AKA: Pull a single site based on the user id via the API).  We handled this by quickly implementing ways to get at the data we wanted via the front-end.
 
 ## Planning, Process, and Problem Solving Strategy
 We originally had some issues with understanding what our Prompt was asking for us to create.  To address this, we whiteboarded a high level flow or what the user experience would be for the UI.  On the backend, we whiteboarded what we expected the corresponded BSON would look like.  After that was done, we gave each other assignments to tackle during the weekend.  We all created user stories, and discussed them on Monday.  After that was done, we split into teams of two to focus on specific application features.
