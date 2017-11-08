@@ -2,7 +2,7 @@
 
 API="http://localhost:4741"
 URL_PATH="/sign-in"
-EMAIL=asdf@asdf.com
+EMAIL=myasdf@asdf.com
 PASSWORD=asdf
 
 curl "${API}${URL_PATH}" \
