@@ -1,5 +1,5 @@
 # Sserpdrow-API
-About: The Sserpdrow API is used by the front-end application for the storage of Site records for individual users.  It uses Express, Mongoose, and MongoDB to store the data in a noSQL database.
+About: The Sserpdrow API is used by the front-end application for the storage of Site records for individual users.  It uses Express, Mongoose, and MongoDB to store the data in a noSQL database. Users interact with the API through the front end to create, edit, delete blogposts, sites and pages.
 
 ## Links
 Client UI: https://mind-blowing-desert-bandits.github.io/sserpdrow-client/
