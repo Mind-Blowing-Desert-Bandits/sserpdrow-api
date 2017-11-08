@@ -27,7 +27,7 @@ const siteSchema = new mongoose.Schema({
   pages: [{
     type: {
       type: String,
-      enum: ['about', 'hours', 'contact']
+      required: true
     },
     title: {
       type: String,
